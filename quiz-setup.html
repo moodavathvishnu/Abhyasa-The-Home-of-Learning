@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App - Setup</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body onload="checkAuth()">
+  <nav class="setup-nav">
+    <a onclick="backToHome()()">
+        <img src="abhyasa.png" alt="Coding Icon" class="img" >
+        </a>
+   
+    <div>
+      <span id="username-display" style="color:rgb(255, 255, 255)"></span>
+      <button onclick="backToHome()()" class="btn btn-red">Back to Home</button>
+      <button onclick="logout()" class="btn btn-red">Logout</button>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Setup Your Quiz</h2>
+    <div class="form-container">
+      <div class="form-group">
+        <label>Programming Language</label>
+        <div class="button-group">
+          <!-- <button onclick="selectLanguage('C')" class="btn btn-option" data-language="C">C</button>
+          <button onclick="selectLanguage('Python')" class="btn btn-option" data-language="Python" scr="python.png">Python</button>
+          <button onclick="selectLanguage('Java')" class="btn btn-option" data-language="Java">Java</button>
+          <button onclick="selectLanguage('C++')" class="btn btn-option" data-language="C++">C++</button>
+          <button onclick="selectLanguage('JavaScript')" class="btn btn-option" data-language="JavaScript">JavaScript</button>
+          <button onclick="selectLanguage('HTML')" class="btn btn-option" data-language="HTML">HTML</button>-->
+          <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Buttons with icons -->
+<div class="language-buttons">
+  <button onclick="selectLanguage('C')" class="btn btn-option" data-language="C">
+    <i class="fas fa-code"></i> C
+  </button>
+
+  <button onclick="selectLanguage('Python')" class="btn btn-option" data-language="Python">
+    <i class="fab fa-python"></i> Python
+  </button>
+
+  <button onclick="selectLanguage('Java')" class="btn btn-option" data-language="Java">
+    <i class="fab fa-java"></i> Java
+  </button>
+
+  <button onclick="selectLanguage('C++')" class="btn btn-option" data-language="C++">
+    <i class="fas fa-laptop-code"></i> C++
+  </button>
+
+  <button onclick="selectLanguage('JavaScript')" class="btn btn-option" data-language="JavaScript">
+    <i class="fab fa-js-square"></i> JavaScript
+  </button>
+
+  <button onclick="selectLanguage('HTML')" class="btn btn-option" data-language="HTML">
+    <i class="fab fa-html5"></i> HTML
+  </button>
+</div>
+
+        </div>
+        <input type="hidden" id="language" value="">
+      </div>
+      <div class="form-group">
+        <label>Difficulty</label>
+        <div class="button-group">
+          <button onclick="selectDifficulty('Easy')" class="btn btn-option" data-difficulty="Easy">Easy</button>
+          <button onclick="selectDifficulty('Medium')" class="btn btn-option" data-difficulty="Medium">Medium</button>
+          <button onclick="selectDifficulty('Hard')" class="btn btn-option" data-difficulty="Hard">Hard</button>
+        </div>
+        <input type="hidden" id="difficulty" value="">
+      </div>
+      <div class="form-group">
+        <label for="num-questions">Number of Questions</label>
+        <select id="num-questions">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <!--<option value="25">25</option>
+          <option value="30">30</option>-->
+        </select>
+      </div class="btn-startquiz">
+      <button onclick="startQuiz()" class="btn">Start Quiz</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

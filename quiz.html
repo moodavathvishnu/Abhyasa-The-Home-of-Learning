@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App - Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkAuth(); loadQuiz()">
+  <nav>
+    <a onclick="backToHome()()">
+        <img src="abhyasa.png" alt="Coding Icon" class="img" >
+        </a>
+    <div>
+      <span id="username-display "style= color:"white" ></span>
+       <button onclick="backToHome()()" class="btn btn-red">Back to Home</button>
+      <button onclick="logout()" class="btn btn-red">Logout</button>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="quiz-info">
+      <span>Time Left: <span id="timer" class="Time">00:00</span></span>
+      <span style="align-items: center;"> Score: <span id="score">0</span></span>
+    </div>
+    <div id="question" class="question-container">
+      <h3 id="question-text"></h3>
+      <div id="options" class="options"></div>
+      <div id="feedback"></div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
