@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('app.js loaded');
+    console.log('main.js loaded');
     const toLoginLink = document.getElementById('to-login');
     const toSignupLink = document.getElementById('to-signup');
     
