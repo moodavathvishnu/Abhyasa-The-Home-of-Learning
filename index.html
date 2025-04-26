@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple quiz - Login/Signup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="con">
+  <header class="site-hedder">
+    <a href="https://www.kmit.in/">
+    <img src="Kmit.png" alt="Coding Icon" class="img">
+    </a>
+    <a href="https://ngit.ac.in/">
+    <img src="Ngit.png" alt="Coding Icon" class="img">
+    </a>
+    <a href="http://www.kmec.in/">
+    <img src="Kmec.png" alt="Coding Icon" class="img">
+    </a>
+    <a href="https://kmce.in/">
+    <img src="Kmce.png" alt="Coding Icon" class="img">
+    </a>
+  </div>
+  </header>
+  <div class="container">
+    <!-- Logo Section -->
+    <div class="logo-container" style="text-align: center; margin-bottom: 20px;">
+      <img src="abhyasa.png" alt="App Logo" style="width: 120px; height: auto;">
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="form-container">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="login-username">Username</label>
+        <input placeholder="Username" type="text" id="login-username" required class="input-usrname">
+      </div>
+      <div class="form-group">
+        <label for="login-password">Password</label>
+        <input placeholder="Password" type="password" id="login-password" required>
+      </div>
+      <button onclick="login()" class="btn">Login</button>
+      <p>Don't have an account? <a href="#" id="to-signup">Sign Up</a></p>
+    </div>
+
+    <!-- Signup Form -->
+    <div id="signup-form" class="form-container hidden">
+      <h2>Sign Up</h2>
+      <div class="form-group">
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-username">Username</label>
+        <input type="text" id="signup-username" required>
+      </div>
+      <div class="form-group">
+        <label for="signup-password">Password</label>
+        <input type="password" id="signup-password" required>
+      </div>
+      <button onclick="signup()" class="btn">Sign Up</button>
+      <p>Already have an account? <a href="#" id="to-login">Login</a></p>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhyasa - The Home of Learning</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkAuth()">
+  <nav class="blue">
+    <img src="abhyasa.png" alt="Coding Icon" class="img">
+    <div>
+      <span id="username-display" class="username-display"></span>
+      <button onclick="logout()" class="btn btn-red">Logout</button>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Welcome to the Quiz App</h2>
+    <p>Learn, practice, and compete with our interactive quizzes and learning resources.</p>
+    <div class="nav-buttons">
+     <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<div class="button-container">
+  <button onclick="window.location.href='quiz-setup.html'" class="btn">
+    <i class="fas fa-question-circle"></i> Quiz
+  </button>
+
+  <button onclick="window.location.href='learn.html'" class="btn">
+    <i class="fas fa-book-reader"></i> Learn
+  </button>
+
+  <button id="leaderboard-btn" class="btn">
+    <i class="fas fa-trophy"></i> Leaderboard
+  </button>
+</div>
+
+      <!--<button id="submit-question-btn" class="btn">Submit Question</button>-->
+    </div>
+    <section id="question-form-section" class="form-container hidden">
+      <h3>Submit a Question</h3>
+      <form id="question-form">
+        <div class="form-group">
+          <label for="question-language">Language</label>
+          <select id="question-language" required>
+            <option value="">Select Language</option>
+            <option value="C">C</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+            <option value="C++">C++</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="HTML">HTML</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="question-difficulty">Difficulty</label>
+          <select id="question-difficulty" required>
+            <option value="">Select Difficulty</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="question-text-input">Question</label>
+          <input type="text" id="question-text-input" required>
+        </div>
+        <div class="form-group">
+          <label for="option1">Option 1</label>
+          <input type="text" id="option1" required>
+        </div>
+        <div class="form-group">
+          <label for="option2">Option 2</label>
+          <input type="text" id="option2" required>
+        </div>
+        <div class="form-group">
+          <label for="option3">Option 3</label>
+          <input type="text" id="option3" required>
+        </div>
+        <div class="form-group">
+          <label for="option4">Option 4</label>
+          <input type="text" id="option4" required>
+        </div>
+        <div class="form-group">
+          <label for="correct-answer">Correct Answer</label>
+          <input type="text" id="correct-answer" required>
+        </div>
+        <div class="form-group">
+          <label for="question-explanation">Explanation</label>
+          <textarea id="question-explanation" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+        <button type="button" onclick="hideQuestionForm()" class="btn btn-red">Cancel</button>
+      </form>
+    </section>
+    <section class="articles">
+      <h3 style="text-align: center;">Featured Articles </style></h3>
+      <div class="featured-articles">
+        <div>
+          <h2>Why should we Learn Programming?</h2>
+          <p>In today's digital age, learning programming is like gaining a superpower. Whether you're a student, an entrepreneur, or just curious, coding opens doors to a world full of opportunities.</p>
+          <iframe width="350" height="220" src="https://www.youtube.com/embed/Dv7gLpW91DM?si=wy6kCfRiHLwlSnR9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+    <section id="leaderboard" class="hidden">
+      <h3>Leaderboard</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Username</th>
+            <th>Score</th>
+            <th>Language</th>
+            <th>Date & Time</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body"></tbody>
+      </table>
+      <button onclick="hideLeaderboard()" class="btn">Back</button>
+    </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
