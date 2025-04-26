@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App - Learn</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkAuth()">
+  <nav>
+    <a onclick="backToHome()()">
+        <img src="abhyasa.png" alt="Coding Icon" class="img" >
+        </a>
+    <div>
+      <!--<span id="username-display"></span>-->
+      <button onclick="logout()" class="btn btn-red">Logout</button>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Learn Programming</h2>
+    <div class="form-group">
+      <label for="learn-language" class="select">Select Language</label>
+      <!--<button onclick="window.location.href='https://www.w3schools.com/python/default.asp'" class="btn">Python</button>
+      <button onclick="window.location.href='https://www.w3schools.com/c/index.php'" class="btn">C</button>
+      <button onclick="window.location.href='https://www.w3schools.com/cpp/default.asp'" class="btn">C++</button>
+      <button onclick="window.location.href='https://www.w3schools.com/java'" class="btn">JAVA</button>
+      <button onclick="window.location.href='https://www.w3schools.com/html/default.asp'" class="btn">HTML</button>
+      <button onclick="window.location.href='https://www.w3schools.com/js/default.asp'" class="btn">JavaScript</button>-->
+      <!-- Font Awesome CDN -->
+<!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Button Container -->
+<div class="button-container">
+  <button onclick="window.location.href='https://www.w3schools.com/python/default.asp'" class="btn">
+    <i class="fab fa-python"></i> Python
+  </button>
+
+  <button onclick="window.location.href='https://www.w3schools.com/c/index.php'" class="btn">
+    <i class="fas fa-code"></i> C
+  </button>
+
+  <button onclick="window.location.href='https://www.w3schools.com/cpp/default.asp'" class="btn">
+    <i class="fas fa-laptop-code"></i> C++
+  </button>
+
+  <button onclick="window.location.href='https://www.w3schools.com/java'" class="btn">
+    <i class="fab fa-java"></i> JAVA
+  </button>
+
+  <button onclick="window.location.href='https://www.w3schools.com/html/default.asp'" class="btn">
+    <i class="fab fa-html5"></i> HTML
+  </button>
+
+  <button onclick="window.location.href='https://www.w3schools.com/js/default.asp'" class="btn">
+    <i class="fab fa-js-square"></i> JavaScript
+  </button>
+</div>
+
+
+      <!--<select id="learn-language" onchange="loadTopics()">
+        <option value="">Select a Language</option>
+        <option value="C">C</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="C++">C++</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML">HTML</option>-->
+        
+      </select>
+    </div>
+    <div id="topics" class="articles"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
